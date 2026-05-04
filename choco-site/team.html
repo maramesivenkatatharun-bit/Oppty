@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#fafafa;}
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  background:rgba(0,0,0,0.6);
+  z-index:1000;
+}
+
+.logo{color:#fff;font-size:24px;font-family:'Playfair Display';}
+
+nav{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+nav a{
+  color:#fff;
+  margin:0 15px;
+  text-decoration:none;
+}
+
+.social{
+  display:flex;
+  gap:15px;
+}
+
+.social a{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,0.2);
+  color:#fff;
+}
+
+
+.hero{
+  height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  color:#fff;
+  text-align:center;
+}
+
+.image-bottom{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  top:0;
+  left:0;
+  z-index:1;
+}
+
+.image-top{
+  position:absolute;
+  width:100%;
+  bottom:0;
+  left:0;
+  z-index:2;
+}
+
+.hero h1{
+  position:relative;
+  z-index:3;
+  font-size:80px;
+  font-family:'Playfair Display';
+}
+
+
+.team-section{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:120px 8%;
+  background:#fff;
+}
+
+.team-section img{
+  width:45%;
+  height:500px;
+  object-fit:cover;
+}
+
+.team-text{
+  width:45%;
+}
+
+.team-text h2{
+  font-size:55px;
+  font-family:'Playfair Display';
+}
+
+.team-text h2 span{
+  font-style:italic;
+}
+
+.team-text p{
+  margin-top:20px;
+  color:#777;
+  line-height:1.7;
+}
+
+
+.read-btn{
+  margin-top:30px;
+  padding:12px 30px;
+  border:1px solid #000;
+  background:none;
+  cursor:pointer;
+  letter-spacing:2px;
+}
+
+
+.footer{
+  position:relative;
+  background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTlHUXsQVXE8I3t49VKWe6kwjLytq0utL15g&s') center/cover no-repeat;
+  height:350px; /* FIXED HEIGHT */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+
+.footer-overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  top:0;
+  left:0;
+}
+
+.footer-content{
+  position:relative;
+  z-index:2;
+}
+
+.footer-logo{
+  font-family:'Playfair Display';
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.footer-social{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+
+.footer-social a{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#fff;
+  color:#333;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">bridgé</div>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="team.html">TEAM</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <div class="social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/slider-background.jpg" class="image-bottom">
+  <img src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/slider-graphic-3.png" class="image-top">
+  <h1>Our team</h1>
+</section>
+
+
+<section class="team-section">
+  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
+
+  <div class="team-text">
+    <h2><span>History</span><br>of manufacturer</h2>
+    <p>
+      Our master chocolatier has over 20 years of experience crafting premium chocolates using traditional European techniques and modern creativity.
+    </p>
+
+    <button class="read-btn">READ ALL</button>
+  </div>
+</section>
+
+
+<section class="team-section">
+
+  <div class="team-text">
+    <h2><span>Creative</span><br>chocolate artist</h2>
+    <p>
+      Our design expert blends art and flavor, creating visually stunning chocolates that taste as amazing as they look.
+    </p>
+
+    <button class="read-btn">READ ALL</button>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80">
+</section>
+
+
+
+<footer class="footer">
+  <div class="footer-overlay"></div>
+
+  <div class="footer-content">
+    <h2 class="footer-logo">bridgé</h2>
+
+    <p>
+      ©️ Copyright Qode Interactive – All Rights Reserved <br>
+      Proudly Made For You.
+    </p>
+
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#fafafa;}
+
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  background:rgba(0,0,0,0.6);
+  z-index:1000;
+}
+
+.logo{color:#fff;font-size:24px;font-family:'Playfair Display';}
+
+nav{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+nav a{
+  color:#fff;
+  margin:0 15px;
+  text-decoration:none;
+}
+
+.social{
+  display:flex;
+  gap:15px;
+}
+
+.social a{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,0.2);
+  color:#fff;
+}
+
+
+.hero{
+  height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  color:#fff;
+  text-align:center;
+}
+
+/* Background Image */
+.image-bottom{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  top:0;
+  left:0;
+  z-index:1;
+}
+
+.image-top{
+  position:absolute;
+  width:100%;
+  bottom:0;
+  left:0;
+  z-index:2;
+}
+
+.hero h1{
+  position:relative;
+  z-index:3;
+  font-size:80px;
+  font-family:'Playfair Display';
+}
+
+
+.artisan{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:100px 8%;
+  background:#fff;
+}
+
+.artisan img{
+  width:45%;
+}
+
+.artisan .text{
+  width:45%;
+}
+
+.artisan h2{
+  font-size:50px;
+  font-family:'Playfair Display';
+}
+
+.artisan p{
+  margin-top:20px;
+  color:#777;
+  line-height:1.7;
+}
+
+
+.gallery{
+  display:flex;
+  gap:20px;
+  padding:80px 8%;
+}
+
+.gallery img{
+  width:33%;
+  height:300px;
+  object-fit:cover;
+}
+
+
+.reviews{
+  text-align:center;
+  padding:120px 10%;
+  background:#fff;
+}
+
+.reviews h2{
+  font-size:48px;
+  font-family:'Playfair Display';
+}
+
+.reviews p{
+  margin:20px auto;
+  max-width:700px;
+  color:#777;
+}
+
+.review-nav span{
+  border:1px solid #ccc;
+  padding:8px 12px;
+  margin:5px;
+  cursor:pointer;
+}
+
+
+.footer{
+  position:relative;
+  background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTlHUXsQVXE8I3t49VKWe6kwjLytq0utL15g&s') center/cover no-repeat;
+  height:350px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+
+.footer-overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+}
+
+.footer-content{
+  position:relative;
+  z-index:2;
+}
+
+.footer-logo{
+  font-family:'Playfair Display';
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.footer-social{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+
+.footer-social a{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#fff;
+  color:#333;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">bridgé</div>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="team.html">TEAM</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <div class="social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</header>
+
+
+<section class="hero">
+
+  <!-- Background Image -->
+  <img src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/slider-background.jpg" 
+       class="image-bottom">
+
+  <!-- Top Graphic -->
+  <img src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/slider-graphic-3.png" 
+       class="image-top">
+
+  <h1>About</h1>
+</section>
+
+
+<section class="artisan">
+  <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0">
+  <div class="text">
+    <h2>Artisan chocolatier</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
+</section>
+
+
+<div class="gallery">
+  <img src="https://images.unsplash.com/photo-1587135991058-8816b028691f">
+  <img src="https://images.unsplash.com/photo-1511381939415-e44015466834">
+  <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52">
+</div>
+
+
+<section class="reviews">
+  <h2>Chocolate reviews</h2>
+
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+
+  <h4>Norah Johnson</h4>
+  <br>
+
+  <div class="review-nav">
+    <span>&lt;</span>
+    <span>&gt;</span>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-overlay"></div>
+
+  <div class="footer-content">
+    <h2 class="footer-logo">bridgé</h2>
+
+    <p>
+      © Copyright Qode Interactive – All Rights Reserved <br>
+      Proudly Made For You.
+    </p>
+
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
