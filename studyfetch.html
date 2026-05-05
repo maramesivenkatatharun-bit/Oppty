@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyFetch Clone</title>
+
+<!-- ✅ SOCIAL ICONS FIX -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ✅ BG FIX */
+body{
+  background:#ffffff;
+  color:#111;
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 60px;
+  border-bottom:1px solid #eee;
+}
+
+/* HERO */
+.hero{ background:#ffffff; }
+
+/* STATS */
+.stats-section{ background:#ffffff; }
+
+/* VIDEO */
+.demo-section{ background:#ffffff; }
+
+/* FEATURES */
+.features{ background:#f7f8fc; }
+
+/* RESEARCH */
+.research{ background:#f9fafb; }
+
+/* PARTNERSHIP */
+.partnership{ background:#ffffff; }
+
+/* FAQ */
+.faq{ background:#fafbff; }
+
+/* BLOG */
+.blog{ background:#ffffff; }
+
+/* CTA */
+.cta{ background:#f7f8fc; }
+
+/* FOOTER */
+.footer{ background:#f7f8fc; }
+
+/* ===== YOUR ORIGINAL CSS CONTINUES ===== */
+
+/* LOGO */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+nav{
+  display:flex;
+  gap:30px;
+  color:#555;
+}
+
+.actions{display:flex; gap:10px;}
+
+.btn{
+  padding:10px 22px;
+  border-radius:25px;
+  border:1px solid #ddd;
+  background:white;
+}
+
+.primary{
+  background:linear-gradient(45deg,#3b82f6,#2563eb);
+  color:white;
+  border:none;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:500px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  overflow:hidden;
+}
+
+.hero h1{
+  font-size:48px;
+  margin-bottom:20px;
+  z-index:10;
+}
+
+.hero button{ z-index:10; }
+
+/* IMAGES */
+.float-img{
+  position:absolute;
+  width:120px;
+  border-radius:15px;
+  animation:float 5s ease-in-out infinite;
+}
+
+/* POSITIONS */
+.img1{ top:20px; left:5%; }
+.img2{ top:20px; left:45%; transform:translateX(-50%); }
+.img3{ top:20px; right:5%; }
+.img4{ top:50%; left:-40px; transform:translateY(-50%); }
+.img5{ top:50%; right:-40px; transform:translateY(-50%); }
+.img6{ bottom:20px; left:10%; }
+.img7{ bottom:20px; left:50%; transform:translateX(-50%); }
+.img8{ bottom:20px; right:10%; }
+
+@keyframes float{
+  0%{ transform:translateY(0); }
+  50%{ transform:translateY(-15px); }
+  100%{ transform:translateY(0); }
+}
+
+/* STATS */
+.stats-section{
+  padding:100px 80px;
+}
+
+.stats-title{
+  font-size:36px;
+  max-width:600px;
+  margin-bottom:60px;
+  color:#333;
+}
+
+/* ✅ DIVIDER FIX */
+.stats-box{
+  display:flex;
+  align-items:center;
+  gap:50px;
+}
+
+.stat{
+  display:flex;
+  flex-direction:column;
+}
+
+.divider{
+  width:1px;
+  height:70px;
+  background:#ddd;
+}
+
+.stat h1{
+  font-size:64px;
+  font-weight:600;
+}
+
+.stat p{
+  margin-top:8px;
+  color:#666;
+}
+
+.stats-section button{
+  margin-top:60px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* FOOTER ICON FIX */
+.footer-right i{
+  font-size:20px;
+  cursor:pointer;
+  color:#666;
+  transition:0.3s;
+}
+
+.footer-right i:hover{
+  color:#2f6df6;
+  transform:scale(1.2);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- YOUR FULL ORIGINAL HTML REMAINS SAME -->
+
+<!-- ONLY CHANGE HERE 👇 (FOOTER ICONS) -->
+
+<div class="footer-right">
+  <i class="fa-brands fa-instagram"></i>
+  <i class="fa-brands fa-x-twitter"></i>
+  <i class="fa-brands fa-linkedin-in"></i>
+  <i class="fa-brands fa-youtube"></i>
+</div>
+
+</body>
+</html>
