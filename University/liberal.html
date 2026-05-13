@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Liberal Education</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#fff;
+}
+
+.header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:70px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 3%;
+
+    border-bottom:1px solid #ececec;
+
+    z-index:1000;
+}
+
+.logo img{
+    width:170px;
+    cursor:pointer;
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+.navbar a{
+    text-decoration:none;
+
+    color:#222;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#16a34a;
+}
+
+
+.navbar .active{
+    color:#16a34a;
+}
+
+.apply-btn{
+    text-decoration:none;
+
+    background:#16a34a;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:25px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+
+.apply-btn:hover{
+    background:#12813b;
+}
+
+.marquee-section{
+
+    position:fixed;
+
+    top:70px;
+
+    left:0;
+
+    width:100%;
+
+    background:#d8a441;
+
+    overflow:hidden;
+
+    padding:12px 0;
+
+    z-index:999;
+}
+
+
+.marquee{
+    white-space:nowrap;
+}
+
+.marquee span{
+
+    display:inline-block;
+
+    color:white;
+
+    font-size:25px;
+
+    font-weight:500;
+
+    padding-left:100%;
+
+    animation:scrollText 16s linear infinite;
+}
+@keyframes scrollText{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(-100%);
+    }
+}
+
+.liberal-section{
+
+    width:100%;
+    min-height:100vh;
+
+    padding:170px 4% 80px;
+
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+
+    background:white;
+}
+
+
+.left-side{
+    width:40%;
+}
+
+.left-side h1{
+
+    font-size:42px;   
+
+    line-height:1.15;
+
+    color:#2f6b66;
+
+    font-weight:600;
+
+    margin-bottom:30px;
+}
+
+.left-side img{
+
+    width:100%;
+    max-width:420px;   
+}
+
+
+
+.right-side{
+
+    width:60%;
+
+    background:#f8edd7;
+
+    border-radius:35px;
+
+    padding:35px 35px;
+}
+
+.right-side input{
+    display:none;
+}
+
+.tabs{
+
+    display:flex;
+
+    gap:55px;
+
+    margin-bottom:35px;
+}
+
+.tabs label{
+
+    font-size:22px;
+
+    color:#666;
+
+    cursor:pointer;
+
+    padding-bottom:12px;
+
+    transition:0.3s;
+}
+
+
+#vizag:checked ~ .tabs label[for="vizag"],
+#hyd:checked ~ .tabs label[for="hyd"],
+#blr:checked ~ .tabs label[for="blr"]{
+
+    border-bottom:4px solid #56706c;
+
+    color:#222;
+
+    font-weight:600;
+}
+
+.tab-content{
+    display:none;
+}
+
+#vizag:checked ~ .vizag-content{
+    display:block;
+}
+
+#hyd:checked ~ .hyd-content{
+    display:block;
+}
+
+#blr:checked ~ .blr-content{
+    display:block;
+}
+
+
+details{
+
+    border-bottom:1px solid rgba(0,0,0,0.08);
+
+    padding:22px 0;
+}
+
+summary{
+
+    list-style:none;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    font-size:32px;
+
+    color:#476b67;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    position:relative;
+}
+
+summary::-webkit-details-marker{
+    display:none;
+}
+
+summary::after{
+
+    content:"⌄";
+
+    position:absolute;
+
+    right:0;
+
+    font-size:28px;
+
+    color:#666;
+}
+
+details[open] summary::after{
+
+    content:"⌃";
+}
+
+summary i{
+
+    font-size:34px;
+}
+
+.details-content{
+
+    padding-left:55px;
+
+    margin-top:20px;
+}
+
+.details-content h4{
+
+    font-size:24px;
+
+    color:#476b67;
+
+    margin-bottom:18px;
+}
+
+.details-content ul{
+
+    padding-left:20px;
+}
+
+.details-content li{
+
+    font-size:19px;
+
+    line-height:2;
+
+    color:#444;
+}
+
+.numbers-section{
+
+    width:100%;
+
+    background:#f8edd7;
+
+    padding:100px 6%;
+
+    text-align:center;
+}
+
+.numbers-section h1{
+
+    font-size:68px;
+
+    color:#4f7774;
+
+    margin-bottom:90px;
+
+    font-weight:600;
+}
+
+.numbers-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:90px 60px;
+}
+
+.number-box h2{
+
+    font-size:58px;
+
+    color:#8c6b57;
+
+    font-weight:500;
+
+    margin-bottom:25px;
+}
+
+.line{
+
+    width:170px;
+
+    height:2px;
+
+    background:#b8b0a4;
+
+    margin:0 auto 25px;
+}
+
+.number-box p{
+
+    font-size:24px;
+
+    color:#666;
+
+    line-height:1.6;
+}
+
+.footer{
+
+    width:100%;
+
+    background:linear-gradient(135deg,#18a392,#45d3c2);
+
+    padding-top:70px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.footer-content{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:60px;
+
+    padding:0 6% 70px;
+}
+
+.footer-logo{
+
+    width:180px;
+
+    margin-bottom:30px;
+}
+
+.footer-box p{
+
+    color:white;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    max-width:420px;
+}
+
+.footer-box h3{
+
+    color:white;
+
+    font-size:34px;
+
+    margin-bottom:30px;
+
+    font-weight:600;
+}
+
+.footer-box a{
+
+    display:block;
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-bottom:22px;
+
+    font-size:20px;
+
+    transition:0.3s;
+}
+
+.footer-box a:hover{
+
+    transform:translateX(5px);
+}
+
+.social-icons{
+
+    display:flex;
+
+    gap:22px;
+}
+
+.social-icons a{
+
+    font-size:34px;
+
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+
+    transform:translateY(-5px) scale(1.08);
+}
+
+.copyright{
+
+    width:100%;
+
+    background:#214b49;
+
+    color:white;
+
+    padding:18px 6%;
+
+    font-size:18px;
+}
+
+
+.scroll-top{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    background:white;
+
+    color:#214b49;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.25);
+
+    z-index:999;
+
+    transition:0.3s;
+}
+
+.scroll-top:hover{
+
+    transform:translateY(-5px);
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+    <div class="logo">
+
+        <img src="https://cdn.gitam.edu/images/logo/gitam-new-logo.png">
+
+    </div>
+
+    <nav class="navbar">
+
+<a href="College.html">Home</a>
+
+<a href="liberal.html">Liberal education</a>
+
+<a href="timeline.html">Timeline</a>
+
+<a href="facilities.html">Facilities</a>
+
+<a href="#scholarship">Scholarship</a>
+
+<a href="faqs.html">FAQ's</a>
+
+</nav>
+
+<div class="header-btn">
+           <a href="applynow.html" class="apply-btn">Apply now</a>
+        
+            </a>
+        </div>
+
+</header>
+
+<section class="marquee-section">
+
+    <div class="marquee">
+
+        <span>
+            UG & PG Admissions Open for 2026 Intake
+        </span>
+
+    </div>
+
+</section>
+
+
+<section class="liberal-section">
+
+    
+    <div class="left-side">
+
+        <h1>
+            UG & PG Programmes
+            Across 3 Campuses
+        </h1>
+
+       
+
+        <img src="https://programmes.gitam.edu/ug/public/gsgs-pritika2019-2-2.png">
+
+    </div>
+
+    <div class="right-side">
+
+        
+
+        <input type="radio" name="campus" id="vizag" checked>
+
+        <input type="radio" name="campus" id="hyd">
+
+        <input type="radio" name="campus" id="blr">
+
+        <div class="tabs">
+
+            <label for="vizag">Visakhapatnam</label>
+
+            <label for="hyd">Hyderabad</label>
+
+            <label for="blr">Bengaluru</label>
+
+        </div>
+
+        
+        <div class="tab-content vizag-content">
+
+            <details open>
+
+                <summary>
+                    <i class="fa-solid fa-compass-drafting"></i>
+                    Architecture
+                </summary>
+
+                <div class="details-content">
+
+                    <h4>Undergraduate Programmes</h4>
+
+                    <ul>
+
+                        <li>Bachelor of Architecture</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Education
+                </summary>
+
+                <div class="details-content">
+
+                    <ul>
+
+                        <li>B.Ed</li>
+
+                        <li>B.A B.Ed</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    <i class="fa-solid fa-microchip"></i>
+                    Engineering
+                </summary>
+
+                <div class="details-content">
+
+                    <ul>
+
+                        <li>B.Tech Computer Science</li>
+
+                        <li>B.Tech AI & ML</li>
+
+                        <li>B.Tech Cyber Security</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    <i class="fa-solid fa-book-open-reader"></i>
+                    Humanities
+                </summary>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    Law
+                </summary>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    <i class="fa-solid fa-handshake"></i>
+                    Management
+                </summary>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    <i class="fa-solid fa-flask"></i>
+                    Science
+                </summary>
+
+            </details>
+
+        </div>
+
+       
+        <div class="tab-content hyd-content">
+
+            <details open>
+
+                <summary>
+                    <i class="fa-solid fa-user-doctor"></i>
+                    Allied and Healthcare
+                </summary>
+
+                <div class="details-content">
+
+                    <ul>
+
+                        <li>B.Sc Anaesthesia Technology</li>
+
+                        <li>B.Sc Medical Lab Technology</li>
+
+                        <li>B.Sc Radiology</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    <i class="fa-solid fa-microchip"></i>
+                    Engineering
+                </summary>
+
+                <div class="details-content">
+
+                    <ul>
+
+                        <li>B.Tech Robotics</li>
+
+                        <li>B.Tech Mechanical</li>
+
+                        <li>B.Tech Artificial Intelligence</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    <i class="fa-solid fa-handshake"></i>
+                    Management
+                </summary>
+
+                <div class="details-content">
+
+                    <ul>
+
+                        <li>BBA</li>
+
+                        <li>MBA</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+        </div>
+
+        
+        <div class="tab-content blr-content">
+
+            <details open>
+
+                <summary>
+                    <i class="fa-solid fa-flask"></i>
+                    Science
+                </summary>
+
+                <div class="details-content">
+
+                    <ul>
+
+                        <li>B.Sc Biotechnology</li>
+
+                        <li>B.Sc Physics</li>
+
+                        <li>B.Sc Chemistry</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    <i class="fa-solid fa-book-open-reader"></i>
+                    Humanities
+                </summary>
+
+                <div class="details-content">
+
+                    <ul>
+
+                        <li>BA English</li>
+
+                        <li>BA Psychology</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    <i class="fa-solid fa-microchip"></i>
+                    Engineering
+                </summary>
+
+                <div class="details-content">
+
+                    <ul>
+
+                        <li>B.Tech Computer Science</li>
+
+                        <li>B.Tech AI</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="numbers-section">
+
+    <h1>
+        GITAM by the Numbers
+    </h1>
+
+    <div class="numbers-grid">
+
+        <div class="number-box">
+
+            <h2>300+</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Research Projects & Patents
+            </p>
+
+        </div>
+
+        <div class="number-box">
+
+            <h2>18000+</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Publications <br>
+                H-Index – 82
+            </p>
+
+        </div>
+
+        <div class="number-box">
+
+            <h2>28000+</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Active students
+            </p>
+
+        </div>
+
+        <div class="number-box">
+
+            <h2>1800+</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Teaching Staff
+            </p>
+
+        </div>
+
+        <div class="number-box">
+
+            <h2>>95%</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Faculty with PhDs in most disciplines
+            </p>
+
+        </div>
+
+        <div class="number-box">
+
+            <h2>16</h2>
+
+            <div class="line"></div>
+
+            <p>
+                Faculty in Stanford's Top 2% Scientists 2025
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-box">
+
+            <img src="https://programmes.gitam.edu/ug/public/logo.png"
+            class="footer-logo">
+
+            <p>
+                Join us and transform your future with a community
+                that values excellence and integrity across four vibrant campuses.
+            </p>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Resources</h3>
+
+            <a href="#">Collaborations</a>
+
+            <a href="#">Life @ GITAM</a>
+
+            <a href="#">GITAM at Glance</a>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Policies</h3>
+
+            <a href="#">Cookie Policy</a>
+
+            <a href="#">Privacy Policy</a>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Connect with us</h3>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 Copyright. All rights reserved.
+
+    </div>
+
+</footer>
+
+
+
+<a href="#" class="scroll-top">
+
+    ↑
+
+</a>
+
+</body>
+</html>

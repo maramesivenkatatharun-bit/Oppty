@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Apply Now - GITAM Clone</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#fffdf9;
+    overflow-x:hidden;
+}
+
+.header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:70px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 3%;
+
+    border-bottom:1px solid #ececec;
+
+    z-index:1000;
+}
+
+.logo img{
+    width:170px;
+    cursor:pointer;
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+.navbar a{
+    text-decoration:none;
+
+    color:#222;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#16a34a;
+}
+
+
+.navbar .active{
+    color:#16a34a;
+}
+
+.apply-btn{
+    text-decoration:none;
+
+    background:#16a34a;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:25px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+
+.apply-btn:hover{
+    background:#12813b;
+}
+
+.marquee-section{
+
+    position:fixed;
+
+    top:70px;
+
+    left:0;
+
+    width:100%;
+
+    background:#d8a441;
+
+    overflow:hidden;
+
+    padding:12px 0;
+
+    z-index:999;
+}
+
+
+.marquee{
+    white-space:nowrap;
+}
+
+.marquee span{
+
+    display:inline-block;
+
+    color:white;
+
+    font-size:25px;
+
+    font-weight:500;
+
+    padding-left:100%;
+
+    animation:scrollText 15s linear infinite;
+}
+
+@keyframes scrollText{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(-100%);
+    }
+}
+
+.form-section{
+    padding-top:180px;
+    padding-bottom:120px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.form-box{
+    width:520px;
+    background:#faf7f1;
+
+    padding:35px;
+
+    border-radius:22px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.06);
+}
+
+.form-title{
+    text-align:center;
+    font-size:36px;
+    color:#555;
+    margin-bottom:30px;
+    font-weight:500;
+}
+
+.input-box{
+    margin-bottom:18px;
+}
+
+.input-box input,
+.input-box select{
+    width:100%;
+    height:58px;
+
+    border:1px solid #d8d2c8;
+    border-radius:12px;
+
+    padding:0 18px;
+
+    font-size:16px;
+    outline:none;
+
+    background:white;
+}
+
+.mobile-row{
+    display:flex;
+    gap:10px;
+}
+
+.country-code{
+    width:90px;
+}
+
+.double-row{
+    display:flex;
+    gap:12px;
+}
+
+.checkbox{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+
+    margin-top:10px;
+    margin-bottom:25px;
+}
+
+.checkbox input{
+    margin-top:5px;
+}
+
+.checkbox p{
+    color:#666;
+    font-size:15px;
+    line-height:1.7;
+}
+
+.submit-btn{
+    display:flex;
+    justify-content:center;
+}
+
+.submit-btn button{
+    background:#46635d;
+    color:white;
+
+    border:none;
+
+    padding:14px 45px;
+
+    border-radius:35px;
+
+    font-size:22px;
+    cursor:pointer;
+}
+
+
+.counselling-section{
+
+    width:100%;
+
+    background:#f8edd7;
+
+    padding:170px 5% 110px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+}
+
+.counselling-content h2{
+
+    font-size:52px;
+
+    color:#555;
+
+    line-height:1.4;
+
+    margin-bottom:35px;
+
+    font-weight:500;
+}
+
+.counselling-btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:#2f6b66;
+
+    color:white;
+
+    padding:18px 42px;
+
+    border-radius:40px;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.counselling-btn:hover{
+
+    background:#214b49;
+
+    transform:translateY(-3px);
+}
+
+.footer{
+    background:linear-gradient(135deg,#18a392,#45d3c2);
+    padding-top:80px;
+}
+
+.footer-content{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:60px;
+
+    padding:0 6% 70px;
+}
+
+.footer-logo{
+    width:180px;
+    margin-bottom:25px;
+}
+
+.footer-box p{
+    color:white;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.footer-box h3{
+    color:white;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+.footer-box a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin-bottom:18px;
+    font-size:18px;
+}
+
+.social-icons{
+    display:flex;
+    gap:20px;
+}
+
+.social-icons a{
+    color:white;
+    font-size:28px;
+}
+
+.copyright{
+    background:#214b49;
+    color:white;
+    text-align:center;
+    padding:18px;
+    font-size:17px;
+}
+
+
+.scroll-top{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+
+    width:70px;
+    height:70px;
+
+    background:white;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+    color:#214b49;
+    font-size:32px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+<div class="logo">
+<img src="https://cdn.gitam.edu/images/logo/gitam-new-logo.png">
+</div>
+
+<nav class="navbar">
+
+<a href="College.html">Home</a>
+
+<a href="liberal.html">Liberal education</a>
+
+<a href="timeline.html">Timeline</a>
+
+<a href="facilities.html">Facilities</a>
+
+<a href="#scholarship">Scholarship</a>
+
+<a href="faqs.html">FAQ's</a>
+
+</nav>
+
+<div class="header-btn">
+           <a href="applynow.html" class="apply-btn">Apply now</a>
+        
+            </a>
+        </div>
+
+</header>
+
+
+<section class="marquee-section">
+
+        <div class="marquee">
+
+            <span>
+                UG & PG Admissions Open for 2026 Intake
+            </span>
+
+        </div>
+
+    </section>
+
+
+<section class="form-section">
+
+<div class="form-box">
+
+<h2 class="form-title">
+ENQUIRY FORM
+</h2>
+
+<div class="input-box">
+<input type="text" placeholder="Enter Name *">
+</div>
+
+<div class="input-box">
+<input type="email" placeholder="Enter Email Address *">
+</div>
+
+<div class="mobile-row">
+
+<div class="input-box country-code">
+<select>
+<option>+91</option>
+</select>
+</div>
+
+<div class="input-box" style="flex:1;">
+<input type="text" placeholder="Enter Mobile Number *">
+</div>
+
+</div>
+
+<div class="input-box">
+<input type="text" placeholder="Enter OTP">
+</div>
+
+<div class="input-box">
+<select>
+<option>Select State *</option>
+<option>Andhra Pradesh</option>
+<option>Telangana</option>
+<option>Karnataka</option>
+</select>
+</div>
+
+<div class="double-row">
+
+<div class="input-box" style="flex:1;">
+<select>
+<option>Select Level *</option>
+<option>UG</option>
+<option>PG</option>
+</select>
+</div>
+
+<div class="input-box" style="flex:1;">
+<select>
+<option>Select School *</option>
+<option>Engineering</option>
+<option>Science</option>
+<option>Business</option>
+</select>
+</div>
+
+</div>
+
+<div class="double-row">
+
+<div class="input-box" style="flex:1;">
+<select>
+<option>Select Campus *</option>
+<option>Visakhapatnam</option>
+<option>Hyderabad</option>
+<option>Bengaluru</option>
+</select>
+</div>
+
+<div class="input-box" style="flex:1;">
+<select>
+<option>Select Program *</option>
+<option>B.Tech</option>
+<option>BBA</option>
+<option>MBA</option>
+</select>
+</div>
+
+</div>
+
+<div class="checkbox">
+
+<input type="checkbox">
+
+<p>
+I authorise GITAM (Deemed to be University) & its representatives to contact me with updates and notifications via Email/ SMS/ WhatsApp/ Call. This will override DND/NDC.
+</p>
+
+</div>
+
+<div class="submit-btn">
+<button>Submit</button>
+</div>
+
+</div>
+
+</section>
+
+<section class="counselling-section">
+
+    <div class="counselling-content">
+
+        <h2>
+            Need help before applying ? <br>
+            Talk to us first.
+        </h2>
+
+        <a href="applynow.html" class="counselling-btn">
+            Schedule a Free Counselling Call
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+<div class="footer-content">
+
+<div class="footer-box">
+
+<img src="https://programmes.gitam.edu/ug/public/logo.png"
+class="footer-logo">
+
+<p>
+Join us and transform your future with a community
+that values excellence and integrity across four vibrant campuses.
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Resources</h3>
+
+<a href="#">Collaborations</a>
+<a href="#">Life @ GITAM</a>
+<a href="#">GITAM at Glance</a>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Policies</h3>
+
+<a href="#">Cookie Policy</a>
+<a href="#">Privacy Policy</a>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Connect with us</h3>
+
+<div class="social-icons">
+
+<a href="#"><i class="fa-brands fa-facebook"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+<a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 Copyright. All rights reserved.
+</div>
+
+</footer>
+
+<a href="#" class="scroll-top">
+↑
+</a>
+
+</body>
+</html>

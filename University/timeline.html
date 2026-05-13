@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Timeline - GITAM Clone</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#fffdf9;
+    overflow-x:hidden;
+}
+
+
+.header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:70px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 3%;
+
+    border-bottom:1px solid #ececec;
+
+    z-index:1000;
+}
+
+.logo img{
+    width:170px;
+    cursor:pointer;
+}
+
+.navbar{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+.navbar a{
+    text-decoration:none;
+
+    color:#222;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#16a34a;
+}
+
+
+.navbar .active{
+    color:#16a34a;
+}
+
+.apply-btn{
+    text-decoration:none;
+
+    background:#16a34a;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:25px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+
+.apply-btn:hover{
+    background:#12813b;
+}
+
+.marquee-section{
+
+    position:fixed;
+
+    top:70px;
+
+    left:0;
+
+    width:100%;
+
+    background:#d8a441;
+
+    overflow:hidden;
+
+    padding:12px 0;
+
+    z-index:999;
+}
+
+
+.marquee{
+    white-space:nowrap;
+}
+
+.marquee span{
+
+    display:inline-block;
+
+    color:white;
+
+    font-size:25px;
+
+    font-weight:500;
+
+    padding-left:100%;
+
+    animation:scrollText 15s linear infinite;
+}
+
+@keyframes scrollText{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(-100%);
+    }
+}
+
+.main{
+    padding-top:170px;
+}
+
+
+.section-title{
+    text-align:center;
+    font-size:68px;
+    color:#406a67;
+    margin-bottom:70px;
+    font-weight:600;
+}
+
+
+.alumni-section{
+    padding:40px 6%;
+}
+
+.alumni-wrapper{
+    display:flex;
+    gap:35px;
+    margin-bottom:30px;
+}
+
+.alumni-card{
+    flex:1;
+    background:white;
+    border-radius:28px;
+    padding:28px;
+
+    display:flex;
+    align-items:center;
+    gap:25px;
+
+    box-shadow:0 3px 15px rgba(0,0,0,0.05);
+}
+
+.alumni-card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.alumni-card h3{
+    font-size:36px;
+    color:#4c6462;
+    margin-bottom:10px;
+}
+
+.alumni-card h4{
+    font-size:24px;
+    color:#666;
+    margin-bottom:10px;
+    font-weight:500;
+}
+
+.alumni-card p{
+    font-size:20px;
+    color:#777;
+    line-height:1.6;
+}
+
+
+.alumni-text{
+    text-align:center;
+    font-size:36px;
+    color:#555;
+}
+
+
+.collab-section{
+    padding:130px 6% 100px;
+}
+
+.collab-title{
+    text-align:center;
+    color:#406a67;
+    font-size:68px;
+    font-weight:600;
+    margin-bottom:35px;
+}
+
+.collab-desc{
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+    color:#666;
+    line-height:1.9;
+    font-size:24px;
+}
+
+.collab-grid{
+    margin-top:70px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+.collab-card{
+    background:white;
+    border-radius:25px;
+    padding:45px 30px;
+
+    box-shadow:0 3px 15px rgba(0,0,0,0.05);
+
+    text-align:center;
+}
+
+.collab-card h3{
+    color:#555;
+    font-size:34px;
+    margin-bottom:40px;
+}
+
+.logo-list{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
+
+.logo-list img{
+    width:180px;
+    margin:auto;
+}
+
+
+.campus-section{
+    padding:40px 6% 120px;
+}
+
+.campus-slider{
+    display:flex;
+    gap:35px;
+}
+
+.campus-card{
+    flex:1;
+    position:relative;
+}
+
+.campus-card img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.campus-name{
+    position:absolute;
+    bottom:18px;
+    right:20px;
+    color:white;
+    font-size:22px;
+    font-weight:600;
+}
+
+
+.footer{
+    background:linear-gradient(135deg,#18a392,#45d3c2);
+    padding-top:80px;
+}
+
+.footer-content{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:60px;
+
+    padding:0 6% 70px;
+}
+
+.footer-logo{
+    width:180px;
+    margin-bottom:25px;
+}
+
+.footer-box p{
+    color:white;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.footer-box h3{
+    color:white;
+    font-size:32px;
+    margin-bottom:30px;
+}
+
+.footer-box a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin-bottom:18px;
+    font-size:18px;
+}
+
+.social-icons{
+    display:flex;
+    gap:20px;
+}
+
+.social-icons a{
+    color:white;
+    font-size:28px;
+}
+
+.copyright{
+    background:#214b49;
+    color:white;
+    text-align:center;
+    padding:18px;
+    font-size:17px;
+}
+
+.scroll-top{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+
+    width:70px;
+    height:70px;
+
+    background:white;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+    color:#214b49;
+    font-size:32px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+<div class="logo">
+<img src="https://cdn.gitam.edu/images/logo/gitam-new-logo.png">
+</div>
+
+<nav class="navbar">
+
+<a href="College.html">Home</a>
+
+<a href="liberal.html">Liberal education</a>
+
+<a href="timeline.html">Timeline</a>
+
+<a href="facilities.html">Facilities</a>
+
+<a href="#scholarship">Scholarship</a>
+
+<a href="faqs.html">FAQ's</a>
+
+</nav>
+<div class="header-btn">
+           <a href="applynow.html" class="apply-btn">Apply now</a>
+        
+            </a>
+        </div>
+
+</header>
+
+<div class="marquee-section">
+    <div class="marquee">
+        <span>
+        UG & PG Admissions Open for 2026 Intake
+
+    </span>
+
+    </div>
+    
+</div>
+
+<div class="main">
+
+<!-- ================= ALUMNI ================= -->
+
+<section class="alumni-section">
+
+<h1 class="section-title">
+Our Prominent Alumni
+</h1>
+
+<div class="alumni-wrapper">
+
+<div class="alumni-card">
+
+<img src="https://programmes.gitam.edu/ug/public/sivakumar.png">
+
+<div>
+<h3>KNV Siva Kumar</h3>
+<h4>Assistant Vice President Reliance Industries Limited</h4>
+<p>B.Tech Civil Engineering 1989-93</p>
+</div>
+
+</div>
+
+<div class="alumni-card">
+
+<img src="https://programmes.gitam.edu/ug/public/Nilima-Prasad-Divi.png">
+
+<div>
+<h3>Kavitha Tumuluri</h3>
+<h4>Vice President Blue Yonder</h4>
+<p>B.Tech Electronics and Communication Engineering 1983-87</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="alumni-text">
+96,000+ Alumni spread across 105+ countries
+</div>
+
+</section>
+
+
+<section class="collab-section">
+
+<h1 class="collab-title">
+Industry & Academic collaborations
+</h1>
+
+<p class="collab-desc">
+GITAM equips its students with the practical skills and insights needed
+to thrive in today's competitive global marketplace by bridging the gap
+between academia and industry.
+</p>
+
+<div class="collab-grid">
+
+<div class="collab-card">
+
+<h3>Academic collaborations</h3>
+
+<div class="logo-list">
+
+<img src="https://programmes.gitam.edu/ug/public/image-463.png">
+<img src="https://programmes.gitam.edu/ug/public/image-466.png">
+<img src="https://programmes.gitam.edu/ug/public/image-465.png">
+<img src="https://programmes.gitam.edu/ug/public/image-470.png">
+
+</div>
+
+</div>
+
+<div class="collab-card">
+
+<h3>Industry collaborations</h3>
+
+<div class="logo-list">
+
+<img src="https://programmes.gitam.edu/ug/public/image-473.png">
+<img src="https://programmes.gitam.edu/ug/public/image-476.png">
+<img src="https://programmes.gitam.edu/ug/public/image-475.png">
+<img src="https://programmes.gitam.edu/ug/public/image-471.png">
+
+</div>
+
+</div>
+
+<div class="collab-card">
+
+<h3>Funding Agencies</h3>
+
+<div class="logo-list">
+
+<img src="https://programmes.gitam.edu/ug/public/image-480.png">
+<img src="https://programmes.gitam.edu/ug/public/image-480.png">
+<img src="https://programmes.gitam.edu/ug/public/image-480.png">
+<img src="https://programmes.gitam.edu/ug/public/image-483.png">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="campus-section">
+
+<h1 class="section-title">
+GITAM Campuses at a Glance
+</h1>
+
+<div class="campus-slider">
+
+<div class="campus-card">
+
+<img src="https://programmes.gitam.edu/ug/public/GIMSR1.png">
+
+<div class="campus-name">
+GIMSR, Visakhapatnam
+</div>
+
+</div>
+
+<div class="campus-card">
+
+<img src="https://programmes.gitam.edu/ug/public/blr1.png">
+
+<div class="campus-name">
+Bengaluru Campus
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<footer class="footer">
+
+<div class="footer-content">
+
+<div class="footer-box">
+
+<img src="https://programmes.gitam.edu/ug/public/logo.png"
+class="footer-logo">
+
+<p>
+Join us and transform your future with a community
+that values excellence and integrity across four vibrant campuses.
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Resources</h3>
+
+<a href="#">Collaborations</a>
+<a href="#">Life @ GITAM</a>
+<a href="#">GITAM at Glance</a>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Policies</h3>
+
+<a href="#">Cookie Policy</a>
+<a href="#">Privacy Policy</a>
+
+</div>
+
+<div class="footer-box">
+
+<h3>Connect with us</h3>
+
+<div class="social-icons">
+
+<a href="#"><i class="fa-brands fa-facebook"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+<a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 Copyright. All rights reserved.
+</div>
+
+</footer>
+
+
+<a href="#" class="scroll-top">
+↑
+</a>
+
+</body>
+</html>
