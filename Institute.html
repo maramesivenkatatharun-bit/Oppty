@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Annamcharya Institute</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #1e3c72;
+    color: white;
+    padding: 5px; 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.logo-section img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.hero {
+    margin-top: 60px;
+    height: 400px;
+    background: url('aits.jpeg')center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero-content {
+    
+    padding: 30px;
+
+    text-align: center;
+    color: white;
+    
+}
+
+.hero-content h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+
+.hero-content p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+
+.hero-content button {
+    background: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+
+.about {
+    padding: 50px;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 10px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: #eee;
+    padding: 30px;
+    text-align: center;
+}
+
+
+.featured {
+    padding: 50px;
+    background: #f5f7fa;
+    text-align: center;
+}
+
+.featured h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.card {
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+
+.card-top {
+    height: 120px;
+}
+
+
+.red {
+    background: linear-gradient(to right, #ff7e5f, #ff9966);
+}
+
+.blue {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+.green {
+    background: linear-gradient(to right, #43e97b, #38f9d7);
+}
+
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+
+.card-body a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+
+.footer {
+    background: #2c2c2c;
+    color: #ccc;
+    padding: 40px 60px;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.footer-col {
+    width: 30%;
+}
+
+
+.footer-col h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+
+.footer hr {
+    margin: 30px 0;
+    border: 0.5px solid #555;
+}
+
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo-section">
+        <img src="collegelogo.jpeg">
+        <h3>Annamcharya Institute</h3>
+    </div>
+
+    <nav>
+        <a href="#">Overview</a>
+        <a href="#">Packages</a>
+        <a href="#">Rankings</a>
+        <a href="#">Course Admissions</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <div class="hero-content">
+        <h1 style="color:orangered;">About College</h1>
+        <p  style="color:#1e3c72;">
+      <b>Anamcharya Institute provides quality education and strong placements.
+            With modern infrastructure and experienced faculty, students are prepared for successful careers.</b>
+        </p>
+        <button>Apply Now</button>
+    </div>
+</div>
+
+
+<div class="stats">
+    <div>
+        <h3>Rankings</h3>
+        <p>262 nd</p>
+    </div>
+
+    <div>
+        <h3>Top MNCs</h3>
+        <p>Placements 4-8lpa</p>
+    </div>
+
+    <div>
+        <h3>AICTE</h3>
+        <p>Accreditation</p>
+    </div>
+
+    <div>
+        <h3>Modern</h3>
+        <p>Infrastructure</p>
+    </div>
+</div>
+
+<div class="featured">
+    <h2>Featured Departments</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <div class="card-top red"></div>
+            <div class="card-body">
+                <h3>Future with AITS</h3>
+                <p>
+                    Build the future with cutting-edge labs and experienced faculty.
+                    Programs in Mechanical, Civil, and Computer Engineering.
+                </p>
+                <a href="#">Learn More →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-top blue"></div>
+            <div class="card-body">
+                <h3>Programs</h3>
+                <p>
+                    Develop leadership and entrepreneurial skills to thrive in global markets.
+                    AACSB-accredited programs.
+                </p>
+                <a href="#">Learn More →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-top green"></div>
+            <div class="card-body">
+                <h3>Arts & Sciences</h3>
+                <p>
+                    Explore diverse programs in humanities, biological sciences, and digital arts.
+                </p>
+                <a href="#">Learn More →</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+      
+        <div class="footer-col">
+            <h3>Annamcharya Institute of Technology & sciences</h3>
+            <p>Venkatapuram Village,</p>
+            <p>Renigunta(m),Tirupati</p>
+            <p>517520</p>
+        </div>
+
+     
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <p>Overview</p>
+            <p>Packages</p>
+            <p>Rankings</p>
+            <p>Course Admissions</p>
+        </div>
+
+      
+        <div class="footer-col">
+            <h3>Resources</h3>
+            <p>Library</p>
+            <p>Campus Map</p>
+            <p>Career Center</p>
+            <p>Athletics</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    
+    <p class="copyright">
+        © 2026 Annamcharya Institute. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
